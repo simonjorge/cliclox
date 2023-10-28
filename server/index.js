@@ -1,3 +1,4 @@
+const path = require ("path")
 const express = require ("express")
 
 const PORT = process.env.PORT || 3001
@@ -8,13 +9,13 @@ app.use (express.static(path.resolve(__dirname, '../client/build')))
 
 app.get ('/', (req, res) => {
     res.json ({
-        message: "Bienvenido al servidor"
+        message: "Hasta luego al servidor"
     })
 })
 
 app.get ('/api', (req, res) => {
     res.json ({
-        message: "hola mundo"
+        message: "adios al mundo"
     })
 })
 
